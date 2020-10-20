@@ -337,3 +337,50 @@ python中查找的常用方法为：
 ```
 
 ### 5 元组
+```python
+# 元组与数组相似，不同之处在于元祖元素不能修改
+aTuple = ('ep', 77, 99, 9)
+print(aTuple)
+print(aTuple[1])
+```
+
+### 6 字典
+* 字典和列表一样，也能够存储多个数据
+* 列表中找某个元素时，是根据下标进行的
+* 字典的每个元素由2部分组成，键:值。例如 'name':'班长' ,'name'为键，'班长'为值
+
+```python
+info = {'test':'banzhang', 'id': 10}
+print(info)
+print(info['test'])
+info.get('test')
+info('s') #不存在键报错
+## 字典的常见操作
+print(len(info))  #字典长度
+print(info.values()) #字典values
+print(info.items()) #返回字典元组列表
+# print(info.has_key('test')) #如果key存在，返回ture python2.0
+## 字典遍历
+for value in info:
+    print(value)
+#遍历字典key
+for key in info.keys(): #遍历key
+    print(key)
+for value in info.values(): #遍历值
+    print(value)
+for item in info.items():   #遍历元组元素
+    print(item)
+for key,value in info.items():  #遍历键值对
+    print(key,value)
+```
+### 7 运算符
+![](./asset/07-01.png)
+#### python内置函数
+![](./asset/07-02.png)
+
+#### 8 引用
+* 在python中，值是靠引用来传递来的。
+* 我们可以用id()来判断两个变量是否为同一个值的引用。 我们可以将id值理解为那块内存的地址标示。
+a = 1
+print(id(a))
+print(id(info['test']))
